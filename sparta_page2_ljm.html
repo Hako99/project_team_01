@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+         }
+        .main{
+
+
+
+            height: 350px;
+            background-color: skyblue;
+        }
+
+        #main_text {
+            text-align: center;
+        }
+
+
+        #member {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+
+        .intro {
+            width: 1200px;
+            margin: 60px auto 100px auto;
+        }
+
+        .introContent{
+            display : flex;
+        }
+
+        .photo > img{
+            width : 350px;
+            height : 420px; 
+            margin-left: 80px;
+            border-radius: 20px;
+
+        }
+        .introText{
+            padding-left : 130px;
+            padding-top : 130px;
+            
+        }
+
+        .selfIntro{
+            width: 1200px;
+            margin: 60px auto 100px auto;
+
+        }
+        .badge{
+            color: white;
+            background-color: skyblue;
+            padding-bottom: 6px;
+        }
+        .mycards{
+            width: 1200px;
+            margin: 60px auto 100px auto;
+
+        }
+        .sns{
+            width: 1200px;
+            margin: 60px auto 100px auto;
+
+        }
+        .snsDetail{
+            display : flex;
+
+        }
+
+        .snsImg{
+
+            width : 150px;
+            height: 130px;
+        }
+
+        .backhome{
+            text-decoration: none; /* 링크의 밑줄 제거 */ 
+            color: inherit; /* 링크의 색상 제거 */
+
+        }
+        .backhome:hover{
+            color: inherit;
+        }
+
+
+
+    </style>
+</head>
+
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+      import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+      import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyA1AAf6DJ4IQsJYywSr0TwNgZ3q1ENZ_DY",
+      authDomain: "webpage-selfintro-10.firebaseapp.com",
+      projectId: "webpage-selfintro-10",
+      storageBucket: "webpage-selfintro-10.appspot.com",
+      messagingSenderId: "191746691521",
+      appId: "1:191746691521:web:43c7db72349589f1a6df40"
+    };
+  
+  
+    const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+  
+  
+         
+  
+  
+  
+  
+  
+  </script>
+
+  
+<body>
+    <div class = "main">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-5" id="main_text">
+                <h1 class="display-3 fw-bold text-white">
+                    <a class="backhome" href="sparta_page1.html">{코린이들};</a></h1><br>
+                <p class="col-md-0 fs-4 text-white">Spring 10조</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class = "intro">
+        <p class="fw-bold text-blue" id = "member">멤버소개</p>
+        <div class = "introContent">
+        <div class = "photo">
+            <img src="https://postfiles.pstatic.net/MjAyMzEyMjdfMTI2/MDAxNzAzNjU2NzIxNTAz.IdTOF7jCf73yZVDuCwrjRsuaOwi4dPaUJUjXoa-w0Kcg.af4cLYdWXRYG6pC5tYYECiivHOreQ_x5kjZpRjhU5Igg.JPEG.leejaemandev/KakaoTalk_20231227_145640971.jpg?type=w966" class="card-img-top" alt="...">
+        </div>
+        <div class = "introText">
+            <h1 class="display-4 fw-bold text-black p-0">이재만</h1><br>
+            <h2 class=" display-7 fs-10 text-black"> Backend Developer</h2>
+        </div>
+        </div>
+    </div>
+
+    <div class = "selfIntro">
+        <h4 class="fw-bold text-blue ">자기소개</h4><br>
+        <ul class="list-group">
+            <div class = "selfDetail">
+            
+            <li class="list-group-item fs-3"><span class="badge">1</span>&nbsp;&nbsp;MBTI : ISTJ</li>
+            </div>
+            <li class="list-group-item fs-3"><span class="badge">2</span>&nbsp;&nbsp;27살입니다.</li>
+            <li class="list-group-item fs-3"><span class="badge">3</span>&nbsp;&nbsp;현재 거주지는 전주입니다.</li>
+            <li class="list-group-item fs-3"><span class="badge">4</span>&nbsp;&nbsp;취미는 산책과 음악 감상입니다.</li>
+            <li class="list-group-item fs-3"><span class="badge">5</span>&nbsp;&nbsp;아직 아는건 없지만 열심히 해보겠습니다.</li>
+          </ul>
+
+
+
+
+    </div>
+
+    <div class="mycards" >
+        <h4 class="fw-bold text-blue ">좋아하는 것과 취미소개</h4><br>
+        <div class="row row-cols-1 row-cols-md-4 g-4" id="card">
+            <div class="col">
+                <div class="card h-80">
+                    <img src="https://postfiles.pstatic.net/MjAyMzEyMjdfMjY5/MDAxNzAzNjU1OTAwMjYz.E8GtXlxleTB02lRhmrGbT4mK1-rW6gGuSLFrcGnGxKcg.a04_jLttk2TgZiGfCUj1HvaPlXkW3IiW7cVWEh8lgskg.JPEG.leejaemandev/%EA%B3%A0%EC%96%91%EC%9D%B4_%EC%B4%AC%EC%98%81.jpg?type=w966"
+                        class="card-img-top" alt="...">
+                    <div class="card-footer">
+                        <h4 class="text-center p-2"># 고양이촬영</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80">
+                    <img src="https://postfiles.pstatic.net/MjAyMzEyMjdfMjA5/MDAxNzAzNjU1OTAzMDQ5.ZwFfY1H7s66q12bseoMuBvIsUnKxRDu0xZTBfkelii8g.-X_OlxubRsFWPvmNQ88z3Ma2xefIxYYsfQM8q7K_uHgg.JPEG.leejaemandev/%EB%A7%88%EB%8F%99%EC%84%9D.jpg?type=w966"
+                        class="card-img-top" alt="...">
+                    <div class="card-footer">
+                        <h4 class="text-center p-2"># 마동석 짤 모으기</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80">
+                    <img src="https://postfiles.pstatic.net/MjAyMzEyMjdfMjY5/MDAxNzAzNjU1OTA2MDY0.1feQNRQIXmtgqY_-jLop3zaD2i2bcFqUonZGQa7SfOEg.maK9LrFmP0mufrdn3knABVDbOFC6b7SjmplwOawwTUMg.JPEG.leejaemandev/%EB%B0%A4%EC%82%B0%EC%B1%85.jpg?type=w966"
+                        class="card-img-top" alt="...">
+                    <div class="card-footer">
+                        <h4 class="text-center p-2"># 밤산책</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-80">
+                    <img src="https://postfiles.pstatic.net/MjAyMzEyMjdfMTkx/MDAxNzAzNjU2MDQ1MzY3.sVNFbAu6ps2BlKz5yCt_cVw3WPgeeTGTlEtSNTrs7dYg.-TLrCQ_3Jo5KYdabYDZ8Wg39DYwHjIytIjSijtj-Jgsg.PNG.leejaemandev/SE-c09c0ea5-60cd-4c75-a459-602cc77d9c65.png?type=w966"
+                        class="card-img-top" alt="...">
+                    <div class="card-footer">
+                        <h4 class="text-center p-2"># 블로그 글 작성</h4>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class ="sns">
+        <h4 class="fw-bold text-blue ">SNS계정</h4><br>
+            <div class = "snsDetail">
+
+                <img class ="snsImg" 
+                src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F1%2Fattach%2F82b3dbc261bc469187787f6afc350ed7" class="img-thumbnail" alt="...">
+                <div class="input-group">
+                    <input type="text" 
+                    disabled
+                    class="form-control pb-0" placeholder="https://dev-class.tistory.com/" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <a href="https://dev-class.tistory.com/" target="_blank"><button class="btn btn-outline-secondary p-5 fs-5" type="button" id="button-addon2">이동하기</button></a>
+                    <!-- 추후링크수정*-->
+                </div>
+            </div><br>
+            <div class = "snsDetail">
+
+                <img class ="snsImg" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" alt="...">
+                <div class="input-group">
+                    <input type="text" 
+                    disabled
+                    class="form-control" placeholder="https://github.com/leejaemandev" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <a href="https://github.com/leejaemandev" target="_blank"><button class="btn btn-outline-secondary p-5 fs-5" type="button" id="button-addon2">이동하기</button></a>
+                    <!-- 추후링크수정*-->
+                </div>
+            </div>
+
+
+
+    </div>
+
+
+</body>
+</html>
